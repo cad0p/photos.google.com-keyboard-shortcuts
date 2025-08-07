@@ -13,6 +13,7 @@
     
     document.addEventListener('keydown', function(e) {
         if (e.key === 's' && !e.ctrlKey && !e.metaKey && !e.altKey) {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
             const saveButton = document.querySelector('button[jsname="LgbsSe"] span[jsname="V67aGc"]');
             if (saveButton && saveButton.textContent === 'Save') {
                 e.preventDefault();
